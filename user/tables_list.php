@@ -44,25 +44,25 @@
 
                                     // active
                                     if ($row['active'] == 1) {
-                                        $active = "<label class='label label-success'>ว่าง</label>";
+                                        $active = "<span class='badge badge-pill badge-success'>ว่าง</span>";
                                     } elseif ($row['active'] == 2) {
-                                        $active = "<label class='label label-danger'>ไม่ว่าง</label>";
+                                        $active = "<span class='badge badge-pill badge-danger'>ไม่ว่าง</span>";
                                     } elseif ($row['active'] == 3) {
-                                        $active = "<label class='label label-warning'>ซ่อม/รอซ่อม</label>";
+                                        $active = "<span class='badge badge-pill badge-warning'>ซ่อม/รอซ่อม</span>";
                                     } elseif ($row['active'] == 4) {
-                                        $active = "<label class='label label-default'>ชำรุด</label>";
+                                        $active = "<span class='badge badge-pill badge-default'>ชำรุด</span>";
                                     } elseif ($row['active'] == 5) {
-                                        $active = "<label class='label label-default'>บริจาค</label>";
+                                        $active = "<span class='badge badge-pill badge-default'>บริจาค</span>";
                                     } elseif ($row['active'] == 6) {
-                                        $active = "<label class='label label-default'>รอบริจาค</label>";
+                                        $active = "<span class='badge badge-pill badge-default'>รอบริจาค</span>";
                                     } elseif ($row['active'] == 7) {
-                                        $active = "<label class='label label-default'>ขายทอดตลาด</label>";
+                                        $active = "<span class='badge badge-pill badge-default'>ขายทอดตลาด</span>";
                                     } elseif ($row['active'] == 8) {
-                                        $active = "<label class='label label-default'>โอนย้าย</label>";
+                                        $active = "<span class='badge badge-pill badge-default'>โอนย้าย</span>";
                                     } // /else
 
                                     if ($_SESSION['role'] == 3 && $row['status'] == 1 && $row['role_product_id'] == 2) {
-                                        if ($row['active'] == 1 || $row['active'] == 2) {
+                                        if ($row['active'] == 1) {
                                             echo
                                                 "
                             
@@ -82,26 +82,25 @@
                                     </td>
 								</tr>";
                                         }
-                                        // else{
-                                        //     echo 
-                                        //     "
-
-                                        //     <tr>
-                                        //     <td id='td_css'>".$row['product_code']."</td>
-                                        //     <td id='td_css'><img class='img-round' src='".$row['product_image_64']."' style='height:40px; width:40px;'  /></td>
-
-                                        //         <td id='td_css'>".$row['product_style']."</td>
-                                        //         <td id='td_css'>".$row['product_location']."</td>
-                                        //         <td id='td_css'>".$active."</td>
-                                        //         <td id='td_css'>".$row['product_etc']."</td>
-                                        //         <td id='td_css'>
-                                        //         <div class='btn-group' role='group'>
-                                        //         <button type='button' class='btn btn-success disabled' data-toggle='modal' id='' data-target='#Modal'>ยืม</button>
-                                        //         <button type='button' class='btn btn-dark' data-toggle='modal' id='' data-target='#Modal'>ข้อมูลเพิ่มเติม</button>
-                                        //         </div>
-                                        //         </td>
-                                        //     </tr>";	
-                                        // }
+                                         else{
+                                            echo
+                                            "
+                                <tr>
+                                <td id='td_css'>" . $row['product_code'] . "</td>
+                                <td id='td_css'><img class='img-round' src='" . $row['product_image_64'] . "' style='height:40px; width:40px;'  /></td>
+                                    
+                                    <td id='td_css'>" . $row['product_style'] . "</td>
+                                    <td id='td_css'>" . $row['product_location'] . "</td>
+                                    <td id='td_css'>" . $active . "</td>
+                                    <td id='td_css'>" . $row['product_etc'] . "</td>
+                                    <td id='td_css'>
+                                    <div class='btn-group' role='group'>
+                                    <button type='button' class='btn btn-success disabled' data-toggle='modal' id='' data-target='#Modal'>ยืม</button>
+                                    <button type='button' class='btn btn-dark' data-toggle='modal' id='' data-target='#Modal'>ข้อมูลเพิ่มเติม</button>
+                                    </div>
+                                    </td>
+                                </tr>";
+                                         }
                                     }
 
                                     if ($_SESSION['role'] == 2 && $row['status'] == 1) {

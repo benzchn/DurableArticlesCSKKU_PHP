@@ -90,10 +90,10 @@
                                     <td id='td_css'>" . $rent_detail . "</td>
                                     <td id='td_css'>" . $Etc . "</td>
                                     <td id='td_css'>
-                                            <a href='php_action/removeRent.php?rentId=" . $rentID . "' class='btn btn-danger' title='ยกเลิก' name='actionRentCancel' data-toggle='modal' >
-                                            <i class='glyphicon glyphicon-remove-circle' title='ยกเลิก'></i></a>
+                                            <a href='php_action/removeRent.php?rentId=" . $rentID . "' class='btn btn-danger' title='ยกเลิก' name='actionRentCancel'  >
+                                            <i class='far fa-times-circle' title='ยกเลิก'></i></a>
                                             <a href='#showRentDetail_" . $rentID . "' class='btn btn-info' title='รายละเอียด' name='actionRepairFollow' data-toggle='modal' >
-                                            <i class='glyphicon glyphicon-list-alt' title='รายละเอียด'></i></a>
+                                            <i class='far fa-list-alt' title='รายละเอียด'></i></a>
                                     </td>
                                 </tr>";
                                             } else {
@@ -107,8 +107,8 @@
                                     <td id='td_css'>" . $rent_detail . "</td>
                                     <td id='td_css'>" . $Etc . "</td>
                                     <td id='td_css'>
-                                            <a href='php_action/removeRent.php?rentId=" . $rentID . "' class='btn btn-danger disabled' title='ยกเลิกไม่ได้' name='actionRentCancel' data-toggle='modal' >
-                                            <i class='glyphicon glyphicon-remove-circle' title='ยกเลิกไม่ได้'></i></a>
+                                            <a href='php_action/removeRent.php?rentId=" . $rentID . "' class='btn btn-danger disabled' title='ยกเลิกไม่ได้' name='actionRentCancel' >
+                                            <i class='far fa-remove' title='ยกเลิกไม่ได้'></i></a>
                                             <a href='#showRentDetail_" . $rentID . "' class='btn btn-info' title='รายละเอียด' name='actionRepairFollow' data-toggle='modal' >
                                             <i class='glyphicon glyphicon-list-alt' title='รายละเอียด'></i></a>
                                     </td>

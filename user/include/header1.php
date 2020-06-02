@@ -35,17 +35,14 @@ if(isset($_SESSION['user_name'])){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- Data Table -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"></script>
-    <script src="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     
     <!-- icon -->
-    <!-- <script
-      src="https://kit.fontawesome.com/ba8cda9d5b.js"
-      crossorigin="anonymous"
-    ></script> -->
+    <script src="https://kit.fontawesome.com/ba8cda9d5b.js" crossorigin="anonymous"></script>
 
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
@@ -108,10 +105,26 @@ if(isset($_SESSION['user_name'])){
         position: relative;
       }
 
-      #navbarSupportedContent > ul > li.active > a {
+      /* ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        padding: 20px 20px;
+        transition-duration: 0.6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        position: relative;
+      } */
+
+      #navbarSupportedContent > ul > li > a.active  {
         color: #5161ce;
-        background-color: transparent;
+        background-color: #fff;
         transition: all 0.7s;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
 
       #navbarSupportedContent a:not(:only-child):after {
@@ -221,7 +234,6 @@ if(isset($_SESSION['user_name'])){
         }
       }
 
-      <style>
 
     /* Make the image fully responsive */
     .carousel-inner img {
@@ -471,35 +483,37 @@ if(isset($_SESSION['user_name'])){
         >
           <i class="fas fa-bars text-white"></i>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
           <ul class="navbar-nav ml-auto">
-            <div class="hori-selector">
+            <!-- <div class="hori-selector">
               <div class="left"></div>
               <div class="right"></div>
-            </div>
+            </div> -->
 
-            <li class="nav-item active" onclick="window.location.href = 'index.php'">
-              <a href="javascript:void(0);" class="nav-link"
+            <li class="nav-item">
+              <a href="index.php" class="nav-link"
                 ><i class="far fa-address-book" ></i>หน้าแรก</a
               >
             </li>
-            <li class="nav-item" onclick="window.location.href = 'tables_list.php'">
-              <a href="javascript:void(0);" class="nav-link"
+            <li class="nav-item" >
+              <a href="tables_list.php" class="nav-link"
                 ><i class="far fa-address-book" ></i>ครุภัณฑ์</a
               >
             </li>
-            <li class="nav-item" onclick="window.location.href = 'rent_my.php'">
-              <a href="javascript:void(0);" class="nav-link" 
+            <li class="nav-item" >
+              <a href="rent_my.php" class="nav-link" 
                 ><i class="far fa-clone"></i>ติดตามการยืม - คืน ครุภัณฑ์</a
               >
             </li>
-            <li class="nav-item" onclick="window.location.href = 'repair_report.php'">
-              <a href="javascript:void(0);" class="nav-link"
+            <li class="nav-item">
+              <a href="repair_report.php" class="nav-link"
                 ><i class="far fa-calendar-alt"></i>แจ้งซ่อม</a
               >
             </li>
             <li class="nav-item">
-              <a href="javascript:void(0);" class="nav-link" 
+              <a href="repair_follow.php" class="nav-link" 
                 ><i class="far fa-chart-bar"></i>ติดตามการแจ้งซ๋อม</a
               >
             </li>
@@ -513,8 +527,11 @@ if(isset($_SESSION['user_name'])){
                             INNER JOIN role_table ON users_personal.role_id = role_table.role_id
                              WHERE user_id = '$session_username'";
 							
-							$query = $conn->query($sql); if($query->num_rows > 0) { $row =
-        $query->fetch_array(); } ?>
+              $query = $conn->query($sql); 
+              if($query->num_rows > 0) 
+              { 
+                $row = $query->fetch_array(); 
+                } ?>
       </div>
       <div class="btn-group" style="padding-right:20px;">
         <button
