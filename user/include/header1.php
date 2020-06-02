@@ -25,6 +25,8 @@ if(isset($_SESSION['user_name'])){
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
 
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap" rel="stylesheet">
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -42,7 +44,10 @@ if(isset($_SESSION['user_name'])){
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     
     <!-- icon -->
-    <script src="https://kit.fontawesome.com/ba8cda9d5b.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/ba8cda9d5b.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+
 
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
@@ -51,7 +56,7 @@ if(isset($_SESSION['user_name'])){
 
     <style>
       body {
-        font-family: 'K2D' !important;
+        font-family: 'K2D', sans-serif;
     }
       
 
@@ -240,15 +245,7 @@ if(isset($_SESSION['user_name'])){
         width: 100%;
         height: 100%;
       }
-    </style>
-
-    <style>
-      @font-face {
-        font-family: "K2D";
-        src: url("https://fonts.googleapis.com/css?family=K2D&display=swap");
-        font-weight: normal;
-        font-style: normal;
-      }
+ 
 
       #featured {
         position: relative;
@@ -456,6 +453,124 @@ if(isset($_SESSION['user_name'])){
       .sec:hover {
         background-color: #bfbfbf;
       }
+
+      #cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu {
+  width: auto;
+  border-bottom: 3px solid #47c9af;
+  line-height: 1;
+}
+#cssmenu ul {
+  background: #ffffff;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu.align-right > ul > li > a {
+  margin-right: 0;
+  margin-left: -4px;
+}
+#cssmenu > ul > li > a {
+  z-index: 2;
+  padding: 18px 25px 12px 25px;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #444444;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: -4px;
+}
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover {
+  color: #ffffff;
+}
+#cssmenu > ul > li > a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(5px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(5px) rotateX(2deg);
+  transform-origin: bottom;
+}
+#cssmenu > ul > li.active > a:after,
+#cssmenu > ul > li:hover > a:after,
+#cssmenu > ul > li > a:hover:after {
+  background: #47c9af;
+}
+.bio-info{
+		padding: 5%;
+		background:#fff;
+		box-shadow: 0px 0px 4px 0px #b0b3b7;
+	}
+	.name{
+		/* font-family: 'Charmonman', cursive; */
+		font-weight:600;
+	}
+	.bio-image{
+		text-align:center;
+	}
+	.bio-image img{
+		border-radius:50%;
+	}
+	.bio-content{
+		text-align:left;
+	}
+	.bio-content p{
+		font-weight:600;
+		font-size:30px;
+	}
     </style>
   </head>
 
@@ -494,27 +609,27 @@ if(isset($_SESSION['user_name'])){
 
             <li class="nav-item">
               <a href="index.php" class="nav-link"
-                ><i class="far fa-address-book" ></i>หน้าแรก</a
+                ><i class="far fa-newspaper"></i>หน้าแรก</a
               >
             </li>
             <li class="nav-item" >
               <a href="tables_list.php" class="nav-link"
-                ><i class="far fa-address-book" ></i>ครุภัณฑ์</a
+                ><i class="far fa-keyboard" ></i>ครุภัณฑ์</a
               >
             </li>
             <li class="nav-item" >
               <a href="rent_my.php" class="nav-link" 
-                ><i class="far fa-clone"></i>ติดตามการยืม - คืน ครุภัณฑ์</a
+                ><i class="far fa-paper-plane"></i>ติดตามการยืม - คืน ครุภัณฑ์</a
               >
             </li>
             <li class="nav-item">
               <a href="repair_report.php" class="nav-link"
-                ><i class="far fa-calendar-alt"></i>แจ้งซ่อม</a
+                ><i class="far fa-sun"></i>แจ้งซ่อม</a
               >
             </li>
             <li class="nav-item">
               <a href="repair_follow.php" class="nav-link" 
-                ><i class="far fa-chart-bar"></i>ติดตามการแจ้งซ๋อม</a
+                ><i class="far fa-clipboard"></i>ติดตามการแจ้งซ่อม</a
               >
             </li>
           </ul>
@@ -544,7 +659,7 @@ if(isset($_SESSION['user_name'])){
           <?php echo $session_username; ?>
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">ข้อมูลส่วนตัว</a>
+          <a class="dropdown-item" href="editprofile.php">ข้อมูลส่วนตัว</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="../logout.php">ออกจากระบบ</a>
         </div>
