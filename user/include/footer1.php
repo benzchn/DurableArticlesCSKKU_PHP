@@ -60,7 +60,7 @@ $(document).ready(function() {
                 for (let i=0; i< menuLength ;i++){
 
               if(menuItem[i].href === currentLocation){
-                menuItem[i].className = "nav-item active"
+                menuItem[i].className = "nav-link active"
               }
                 }
 
