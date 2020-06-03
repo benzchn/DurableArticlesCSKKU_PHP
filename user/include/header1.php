@@ -50,8 +50,12 @@ if(isset($_SESSION['user_name'])){
 
 
 
-    <link href="dist/css/select2.css" rel="stylesheet" />
-<script src="dist/js/select2.min.js"></script>
+    <link href="dist/tail.select-default.css" rel="stylesheet" />
+<script src="dist/tail.select.js"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/css/bootstrap4/tail.select-default.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/tail.select@0.5.15/js/tail.select.min.js"></script> -->
+
 
 
     <style>

@@ -39,9 +39,11 @@
 
                             $query = $conn->query($sql);
 
-                            echo '<select class="form-control" title="เลือกพัสดุ" id="picker" name="product_id" data-live-search="true"
-                                    onchange="document.location=\'repair_report.php?pid=\'+this.value" height="38px">';
-
+                            echo '<select class="select1" data-width="auto" name="product_id" data-live-search="true"
+                                    onchange="document.location=\'repair_report.php?pid=\'+this.value">';
+                                    ?>
+                                    <option disabled="disabled" selected>กรุณาเลือก </option>
+                                    <?php
 							while($row = $query->fetch_assoc()){
                                 if($row['status'] == 1 && $row['role_product_id'] == 2 && $_SESSION['role'] == 3){
                                     echo '<option value="'.$row['product_id'].'"';
@@ -145,6 +147,10 @@
                                         </div>
                                 </div>
 
+
+
+
+                                
                                 <div class="text-center">
                                     <input type="submit"  name="submit"  value="บันทึก" class="btn btn-info btn-block rounded-0 py-2">
                                 </div>
@@ -153,9 +159,7 @@
 </form>
 
         
-                
-
-
+            
                     <!-- </div>  -->
                 </div> 
             </div> 
@@ -178,9 +182,23 @@ $(document).ready(function() {
 </script>
 
 <script>
-$(document).ready(function() {
-    $('#picker').select2();
+
+// $(document).ready(function() {
+//     $('#picker').select2();
+// });
+
+tail.select('.select1', {
+    search: true
+    
 });
+
+
+    // $('#selectpicker').selectpicker({
+    //     liveSearch: true,
+    //     maxOption: 1
+
+    // });
+
 </script>
 
 <?php require_once 'include/footer1.php'; ?>
