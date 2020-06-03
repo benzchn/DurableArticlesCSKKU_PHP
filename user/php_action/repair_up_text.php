@@ -12,7 +12,7 @@ require_once 'core.php';
 // echo $productId."/".$productCode."/".$repairDetail."/".$repairEtc."/".$whoCreate."/".$User_name;
 
 	$sql = "INSERT INTO repair_report (product_id, product_code, repair_detail, repair_etc, repair_create_date, repair_modified_date, repair_who_create, user_name, repair_active, repair_status) 
-    VALUES ('$productId', '$productCode', '$repairDetail', '$repairEtc', NOW(),NOW(), '$whoCreate', '$User_name',1,1)";
+    VALUES ('$productId', '$productCode', '$repairDetail', '$repairEtc', NOW(),NOW(), '$whoCreate', '$User_name',1,0)";
 
 	if($connect->query($sql) === TRUE) {
 

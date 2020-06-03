@@ -18,10 +18,9 @@
                         <i class="glyphicon glyphicon-edit"></i> รายละเอียดการซ่อม</div>
                     </div>
 
-                    <div style="padding: 15px;">
+                    <!-- <div style="padding: 15px;"> -->
 
-                    <form class="well form-horizontal" action="php_action/repair_up_image.php" method="post"
-                        id="contact_form" enctype="multipart/form-data" form="form1">
+                    <form action="php_action/repair_up_image.php" method="post id="contact_form" enctype="multipart/form-data" form="form1" style="padding-top:15px;">
 
                                 <!--Body-->
                                 <div class="form-group row">
@@ -69,13 +68,13 @@
                                         ?>
                                     
                                     </div> 
-                                    <!-- <div>
-                                    <label style="color:#60e160;padding-left:20px;">ค้นหาพัสดุโดย
-                                        ชื่อพัสดุ/ยี่ห้อ</label>
+                                    <div style="padding-left:160px;">
+                                    <label style="color:#60e160;padding-left:20px;">ค้นหาพัสดุโดยชื่อพัสดุ/ยี่ห้อ</label>
                                         </div>
-                                    </div> -->
-                                </div>
+                                    </div>
                                 
+                                
+
                                 <div class="form-group row">
                                     <div class="input-group mb-2">
 
@@ -124,9 +123,10 @@
                                         <input name="etc" id="etc" placeholder="" class="form-control" type="text" required>
 
 </div>
-<label
+<div style="padding-left:170px;">
+<label 
     style="color:#60e160;padding-left:20px;">คำอธิบายหรือหมายเหตุเพิ่มเติม (สถานที่/เลขห้อง)</label>
-
+</div>
 </div>
 
 
@@ -139,15 +139,16 @@
                                     </div>
                                         <input name="files[]" class="form-control" type="file" multiple>
                                     </div>
-
+                                    <div style="padding-left:170px;">
                                     <label style="color:#60e160;padding-left:20px;">เลือกรูปภาพอัปโหลด
                                         (สามารถเลือกได้หลายไฟล์)</label>
+                                        </div>
                                 </div>
 
                                 <div class="text-center">
                                     <input type="submit"  name="submit"  value="บันทึก" class="btn btn-info btn-block rounded-0 py-2">
                                 </div>
-                            </div>
+                            <!-- </div> -->
 
 </form>
 
@@ -155,7 +156,7 @@
                 
 
 
-                    </div> 
+                    <!-- </div>  -->
                 </div> 
             </div> 
         </div>

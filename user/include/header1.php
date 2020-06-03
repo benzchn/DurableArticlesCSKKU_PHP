@@ -17,7 +17,7 @@ if(isset($_SESSION['user_name'])){
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=0.1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <title>ระบบครุภัณฑ์ ภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น</title>
     <!-- Latest compiled and minified CSS -->
     <link
@@ -50,7 +50,7 @@ if(isset($_SESSION['user_name'])){
 
 
 
-    <link href="dist/css/select2.min.css" rel="stylesheet" />
+    <link href="dist/css/select2.css" rel="stylesheet" />
 <script src="dist/js/select2.min.js"></script>
 
 
@@ -247,58 +247,63 @@ if(isset($_SESSION['user_name'])){
       }
  
 
-      #featured {
-        position: relative;
-      }
+      #featured{
+	position: relative;
+}
+#featuredico{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.readmore{
+	background-color: black;
+	padding: 5px 10px;
+	color: white;
+	text-decoration: none;
+	border-radius: 3px;
+	display: inline-block;
+}
+.readmore:hover{
+	background-color: #383838;
+}
+.old_ie header h1, .old_ie nav, .old_ie nav li, .old_ie #adbanner a, .old_ie article, .old_ie .readmore, .old_ie #sponsors a {
+    display: inline;
+    zoom: 1;
+}
+article{
+	width: 280px;
+	margin-right: 40px;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #c8c8c8;
+	margin-bottom: 20px;
+	padding: 7px;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px #ccc;
+	background-color: white;
+	*display:inline;
+    zoom:1;
+}
+article p{
+	margin-bottom: 7px;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.column {
+  float: left;
+  width: 25%;
+  text-align:center;
+}
 
-      #featuredico {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      article {
-        width: 280px;
-        margin-right: 40px;
-        display: inline-block;
-        vertical-align: top;
-        border: 1px solid #c8c8c8;
-        margin-bottom: 20px;
-        padding: 7px;
-        border-radius: 3px;
-        box-shadow: 0 2px 3px #ccc;
-        background-color: white;
-        *display: inline;
-        zoom: 1;
-      }
-
-      article p {
-        margin-bottom: 7px;
-      }
-
-      .readmore {
-        background-color: black;
-        padding: 5px 10px;
-        color: white;
-        text-decoration: none;
-        border-radius: 3px;
-        display: inline-block;
-      }
-
-      .readmore:hover {
-        background-color: #383838;
-      }
-
-      .old_ie header h1,
-      .old_ie nav,
-      .old_ie nav li,
-      .old_ie #adbanner a,
-      .old_ie article,
-      .old_ie .readmore,
-      .old_ie #sponsors a {
-        display: inline;
-        zoom: 1;
-      }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
       .icons {
         display: inline;

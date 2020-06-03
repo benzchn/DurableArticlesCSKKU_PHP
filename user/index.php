@@ -38,8 +38,13 @@
                 <div style="box-shadow: 0 1px 2px rgba(0,0,0,.05);border-color: #ddd;margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid transparent;
-    border-radius: 4px;">
-                    <div style="background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);background-repeat: repeat-x;    color: #333;
+    border-radius: 4px;
+    display: block;
+    position: relative;">
+                    <div style="
+                    background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);
+                    background-repeat: repeat-x;    
+                    color: #333;
     background-color: #f5f5f5;
     border-color: #ddd;padding: 10px 15px;
     border-bottom: 1px solid transparent;
@@ -48,6 +53,7 @@
                         <div style="box-sizing: border-box;"> 
                         <i class="glyphicon glyphicon-edit"></i> CSS@KKU NEWS</div>
                     </div>
+
                     <div style="padding: 15px;">
 
                         <div style="padding-top: 20px;">
@@ -57,10 +63,12 @@
                         </div>
 
                     </div> 
-                </div> 
+
+                </div>
+
             </div> 
         </div>
-        </div>
+</div>
 
    
 <?php require_once 'include/footer1.php'; ?>
