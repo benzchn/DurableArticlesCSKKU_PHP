@@ -76,13 +76,13 @@
 
 									echo 
 								"<tr>
-									<td id='td_css'>".$productName."</td>
-									<td id='td_css'>".$DateCreate."</td>
-									<td id='td_css'>".$Operater."</td>
-                                    <td id='td_css'>".$status."</td>
-                                    <td id='td_css'>
+									<td >".$productName."</td>
+									<td >".$DateCreate."</td>
+									<td ></td>
+                                    <td >".$status."</td>
+                                    <td >
                                             <a href='#showRepairDetail_".$row[5]."' class='btn btn-info' title='รายละเอียด' name='actionRepairFollow' data-toggle='modal' >
-                                            <i class='glyphicon glyphicon-list-alt' title='รายละเอียด'></i></a>
+                                            <i class='far fa-list-alt' title='รายละเอียด'></i></a>
                                     </td>
                                 </tr>";	
 

@@ -7,6 +7,7 @@
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;">
+    
                     <div style="background-image: linear-gradient(to bottom,#f5f5f5 0,#e8e8e8 100%);background-repeat: repeat-x;    color: #333;
     background-color: #f5f5f5;
     border-color: #ddd;padding: 10px 15px;
@@ -40,7 +41,7 @@
                             $query = $conn->query($sql);
 
                             echo '<select class="form-control" title="เลือกพัสดุ" id="picker" name="product_id" data-live-search="true"
-                                    onchange="document.location=\'repair_report.php?pid=\'+this.value">';
+                                    onchange="document.location=\'repair_report.php?pid=\'+this.value" height="38px">';
 
 							while($row = $query->fetch_assoc()){
                                 if($row['status'] == 1 && $row['role_product_id'] == 2 && $_SESSION['role'] == 3){
@@ -144,7 +145,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <input type="submit" value="บันทึก" class="btn btn-info btn-block rounded-0 py-2">
+                                    <input type="submit"  name="submit"  value="บันทึก" class="btn btn-info btn-block rounded-0 py-2">
                                 </div>
                             </div>
 
